@@ -1,0 +1,85 @@
+<% layout("layouts/boilerplate") %>
+    
+    <!-- <form method="post" action="/listings">
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" name="listing[title]">
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea type="text" class="form-control" name="listing[description]"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="image" class="form-label">Image URL/Link</label>
+        <input type="text" class="form-control" name="listing[image]">
+    </div>
+    <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input type="number" class="form-control" name="listing[price]">
+        
+    </div>
+    <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input type="text" class="form-control" name="listing[location]">
+    </div>
+    <div class="mb-3">
+        <label for="country" class="form-label">Country</label>
+        <input type="text" class="form-control" name="listing[country]">
+    </div>
+
+    <button type="submit" class="btn btn-danger">Add</button>
+    </form> -->
+
+
+    <div class="row">
+    <div class="col-8 offset-2">
+    <br>
+    <h2>Create a new Listing :</h2>
+    <form method="post" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3" >
+            <label for="title" class="form-label">Title</label>
+            <input name="listing[title]" type="text" class="form-control" placeholder="Enter title" required>
+            <div class="valid-feedback">Title looks good!</div>
+            <div class="invalid-feedback">Title looks bad!</div>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea name="listing[description]" type="text"  class="form-control" required></textarea>
+            <div class="valid-feedback">description looks good!</div>
+            <div class="invalid-feedback">description looks bad!</div>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload Image</label>
+            <input name="listing[image]" type="file" class="form-control" required>
+            <!-- <div class="valid-feedback">image looks good!</div>
+            <div class="invalid-feedback">image looks bad!</div> -->
+        </div>
+        <div class="row">
+        <div class="mb-3 col-md-4">
+            <label for="price" class="form-label">Price</label>
+            <input name="listing[price]" type="text" class="form-control"
+            placeholder="Enter price" required>
+            <div class="valid-feedback">price is ok</div>
+            <div class="invalid-feedback">price should be valid</div>
+        </div>
+        <div class="mb-3 col-md-8">
+            <label for="location" class="form-label">Location</label>
+            <input name="listing[location]" type="text" class="form-control"
+            placeholder="Enter location" required>
+            <div class="valid-feedback">location looks good!</div>
+            <div class="invalid-feedback">location looks bad!</div>
+        </div>
+        </div>
+        <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+            <input name="listing[country]" type="text" class="form-control"
+            placeholder="Enter Country" required>
+            <div class="valid-feedback">country looks good!</div>
+            <div class="invalid-feedback">country looks bad!</div>
+        </div>
+        <br>
+        <button class="btn btn-danger add-btn">Add</button>
+        <br><br>
+    </form>
+    </div>
+    </div>

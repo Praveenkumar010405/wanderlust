@@ -87,9 +87,6 @@ async function main(){
     await mongoose.connect(dbUrl);
 }
 
-// app.get("/",(req,res)=>{
-//     res.send("i am root")
-// })
 
 app.use((req,res,next)=>{
     res.locals.success=req.flash("success");
@@ -116,7 +113,9 @@ app.use("/listings/:id/reviews",reviewRouter);
 //user routes
 app.use("/",userRouter);
 
-
+app.get("/",(req,res)=>{
+    res.redirect("/listings")
+})
 
 app.use((req,res,next)=>{
     next(new ExpressError(404,"page not found"));
